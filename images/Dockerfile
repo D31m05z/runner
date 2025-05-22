@@ -64,4 +64,11 @@ COPY --from=build /usr/local/lib/docker/cli-plugins/docker-buildx /usr/local/lib
 
 RUN install -o root -g root -m 755 docker/* /usr/bin/ && rm -rf docker
 
+# This command is used to replace the default node binary with the custom node20 binary
+# https://github.com/D31m05z/node20-ubuntu1804/releases/tag/v20.19.2
+# Custom Node.js Build for Ubuntu 18.04
+# This release provides a custom build of Node.js for Ubuntu 18.04 (Bionic Beaver) to ensure compatibility with GitHub Actions runners.
+# The build uses GCC 10.3.0 to address compatibility issues with GLIBC versions.
+RUN curl -f -L -o /home/runner/externals/node20/bin/node https://github.com/D31m05z/node20-ubuntu1804/releases/download/v20.19.2/node
+
 USER runner
