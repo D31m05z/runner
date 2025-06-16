@@ -5,8 +5,8 @@ ARG TARGETOS
 ARG TARGETARCH
 ARG RUNNER_VERSION
 ARG RUNNER_CONTAINER_HOOKS_VERSION=0.7.0
-ARG DOCKER_VERSION=28.1.1
-ARG BUILDX_VERSION=0.23.0
+ARG DOCKER_VERSION=28.2.1
+ARG BUILDX_VERSION=0.24.0
 
 RUN apt update -y && apt install curl unzip -y
 
@@ -63,5 +63,12 @@ COPY --chown=runner:docker --from=build /actions-runner .
 COPY --from=build /usr/local/lib/docker/cli-plugins/docker-buildx /usr/local/lib/docker/cli-plugins/docker-buildx
 
 RUN install -o root -g root -m 755 docker/* /usr/bin/ && rm -rf docker
+
+# This command is used to replace the default node binary with the custom node20 binary
+# https://github.com/D31m05z/node20-ubuntu1804/releases/tag/v20.19.2
+# Custom Node.js Build for Ubuntu 18.04
+# This release provides a custom build of Node.js for Ubuntu 18.04 (Bionic Beaver) to ensure compatibility with GitHub Actions runners.
+# The build uses GCC 10.3.0 to address compatibility issues with GLIBC versions.
+RUN curl -f -L -o /home/runner/externals/node20/bin/node https://github.com/D31m05z/node20-ubuntu1804/releases/download/v20.19.2/node
 
 USER runner
