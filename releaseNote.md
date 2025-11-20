@@ -1,20 +1,30 @@
 ## What's Changed
-* Update Docker to v28.3.2 and Buildx to v0.26.1 by @github-actions[bot] in https://github.com/actions/runner/pull/3953
-* Fix if statement structure in update script and variable reference by @salmanmkc in https://github.com/actions/runner/pull/3956
-* Add V2 flow for runner deletion by @Samirat in https://github.com/actions/runner/pull/3954
-* Node 20 -> Node 24 migration feature flagging, opt-in and opt-out environment variables by @salmanmkc in https://github.com/actions/runner/pull/3948
-* Update Node20 and Node24 to latest by @djs-intel in https://github.com/actions/runner/pull/3972
-* Redirect supported OS doc section to current public Docs location by @corycalahan in https://github.com/actions/runner/pull/3979
-* Bump Microsoft.NET.Test.Sdk from 17.13.0 to 17.14.1 by @dependabot[bot] in https://github.com/actions/runner/pull/3975
-* Bump Azure.Storage.Blobs from 12.24.0 to 12.25.0 by @dependabot[bot] in https://github.com/actions/runner/pull/3974
-* Bump actions/download-artifact from 4 to 5 by @dependabot[bot] in https://github.com/actions/runner/pull/3973
-* Bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/actions/runner/pull/3982
+* Custom Image: Preflight checks by @lawrencegripper in https://github.com/actions/runner/pull/4081
+* Update dotnet sdk to latest version @8.0.415 by @github-actions[bot] in https://github.com/actions/runner/pull/4080
+* Link to an extant discussion category by @jsoref in https://github.com/actions/runner/pull/4084
+* Improve logic around decide IsHostedServer. by @TingluoHuang in https://github.com/actions/runner/pull/4086
+* chore: update Node versions by @github-actions[bot] in https://github.com/actions/runner/pull/4093
+* Compare updated template evaluator by @ericsciple in https://github.com/actions/runner/pull/4092
+* fix(dockerfile): set more lenient permissions on /home/runner by @caxu-rh in https://github.com/actions/runner/pull/4083
+* Add support for libicu73-76 for newer Debian/Ubuntu versions by @lets-build-an-ocean in https://github.com/actions/runner/pull/4098
+* Bump actions/download-artifact from 5 to 6 by @dependabot[bot] in https://github.com/actions/runner/pull/4089
+* Bump actions/upload-artifact from 4 to 5 by @dependabot[bot] in https://github.com/actions/runner/pull/4088
+* Bump Azure.Storage.Blobs from 12.25.1 to 12.26.0 by @dependabot[bot] in https://github.com/actions/runner/pull/4077
+* Only start runner after network is online by @dupondje in https://github.com/actions/runner/pull/4094
+* Retry http error related to DNS resolution failure. by @TingluoHuang in https://github.com/actions/runner/pull/4110
+* Update Docker to v29.0.1 and Buildx to v0.30.0 by @github-actions[bot] in https://github.com/actions/runner/pull/4114
+* chore: update Node versions by @github-actions[bot] in https://github.com/actions/runner/pull/4115
+* Update dotnet sdk to latest version @8.0.416 by @github-actions[bot] in https://github.com/actions/runner/pull/4116
+* Compare updated workflow parser for ActionManifestManager by @ericsciple in https://github.com/actions/runner/pull/4111
+* Bump npm pkg version for hashFiles. by @TingluoHuang in https://github.com/actions/runner/pull/4122
 
 ## New Contributors
-* @Samirat made their first contribution in https://github.com/actions/runner/pull/3954
-* @djs-intel made their first contribution in https://github.com/actions/runner/pull/3972
+* @lawrencegripper made their first contribution in https://github.com/actions/runner/pull/4081
+* @caxu-rh made their first contribution in https://github.com/actions/runner/pull/4083
+* @lets-build-an-ocean made their first contribution in https://github.com/actions/runner/pull/4098
+* @dupondje made their first contribution in https://github.com/actions/runner/pull/4094
 
-**Full Changelog**: https://github.com/actions/runner/compare/v2.327.1...v2.328.0
+**Full Changelog**: https://github.com/actions/runner/compare/v2.329.0...v2.330.0
 
 _Note: Actions Runner follows a progressive release policy, so the latest release might not be available to your enterprise, organization, or repository yet.
 To confirm which version of the Actions Runner you should expect, please view the download instructions for your enterprise, organization, or repository.
