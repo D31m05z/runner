@@ -1,37 +1,30 @@
 ## What's Changed
-* Increase error body max length before truncation by @ericsciple in https://github.com/actions/runner/pull/3762
-* Fix release.yml break by upgrading actions/github-script by @TingluoHuang in https://github.com/actions/runner/pull/3772
-* Small runner code cleanup. by @TingluoHuang in https://github.com/actions/runner/pull/3773
-* Enable hostcontext to track auth migration. by @TingluoHuang in https://github.com/actions/runner/pull/3776
-* Add option in OAuthCred to load authUrlV2. by @TingluoHuang in https://github.com/actions/runner/pull/3777
-* Remove create session with broker in MessageListener. by @TingluoHuang in https://github.com/actions/runner/pull/3782
-* Enable auth migration based on config refresh. by @TingluoHuang in https://github.com/actions/runner/pull/3786
-* Set JWT.alg to PS256 with PssPadding. by @TingluoHuang in https://github.com/actions/runner/pull/3789
-* Enable FIPS by default. by @TingluoHuang in https://github.com/actions/runner/pull/3793
-* Support auth migration using authUrlV2 in Runner/MessageListener. by @TingluoHuang in https://github.com/actions/runner/pull/3787
-* Cleanup feature flag actions_skip_retry_complete_job_upon_known_errors by @ericsciple in https://github.com/actions/runner/pull/3806
-* Update dotnet sdk to latest version @8.0.408 by @github-actions in https://github.com/actions/runner/pull/3808
-* Bump hook to 0.7.0 by @nikola-jokic in https://github.com/actions/runner/pull/3813
-* Allow enable auth migration by default. by @TingluoHuang in https://github.com/actions/runner/pull/3804
-* Do not retry /renewjob on 404 by @ericsciple in https://github.com/actions/runner/pull/3828
-* Bump Microsoft.NET.Test.Sdk from 17.12.0 to 17.13.0 in /src by @dependabot in https://github.com/actions/runner/pull/3719
-* Add copilot-instructions.md by @pje in https://github.com/actions/runner/pull/3810
-* Bump actions/upload-release-asset from 1.0.1 to 1.0.2 by @dependabot in https://github.com/actions/runner/pull/3553
-* Ignore exception during auth migration. by @TingluoHuang in https://github.com/actions/runner/pull/3835
-* feat: default fromPath for problem matchers by @dsanders11 in https://github.com/actions/runner/pull/3802
-* Bump Azure.Storage.Blobs from 12.23.0 to 12.24.0 in /src by @dependabot in https://github.com/actions/runner/pull/3837
-* Bump nodejs version. by @TingluoHuang in https://github.com/actions/runner/pull/3840
-* Feature-flagged support for `JobContext.CheckRunID` by @pje in https://github.com/actions/runner/pull/3811
-* Bump System.ServiceProcess.ServiceController from 8.0.0 to 8.0.1 in /src by @dependabot in https://github.com/actions/runner/pull/3844
-* Bump xunit.runner.visualstudio from 2.5.8 to 2.8.2 in /src by @dependabot in https://github.com/actions/runner/pull/3845
-* Make sure the token's claims are match as expected. by @TingluoHuang in https://github.com/actions/runner/pull/3846
-* Prefer _migrated config on startup by @lokesh755 in https://github.com/actions/runner/pull/3853
-* Update docker and buildx by @TingluoHuang in https://github.com/actions/runner/pull/3854
+* Custom Image: Preflight checks by @lawrencegripper in https://github.com/actions/runner/pull/4081
+* Update dotnet sdk to latest version @8.0.415 by @github-actions[bot] in https://github.com/actions/runner/pull/4080
+* Link to an extant discussion category by @jsoref in https://github.com/actions/runner/pull/4084
+* Improve logic around decide IsHostedServer. by @TingluoHuang in https://github.com/actions/runner/pull/4086
+* chore: update Node versions by @github-actions[bot] in https://github.com/actions/runner/pull/4093
+* Compare updated template evaluator by @ericsciple in https://github.com/actions/runner/pull/4092
+* fix(dockerfile): set more lenient permissions on /home/runner by @caxu-rh in https://github.com/actions/runner/pull/4083
+* Add support for libicu73-76 for newer Debian/Ubuntu versions by @lets-build-an-ocean in https://github.com/actions/runner/pull/4098
+* Bump actions/download-artifact from 5 to 6 by @dependabot[bot] in https://github.com/actions/runner/pull/4089
+* Bump actions/upload-artifact from 4 to 5 by @dependabot[bot] in https://github.com/actions/runner/pull/4088
+* Bump Azure.Storage.Blobs from 12.25.1 to 12.26.0 by @dependabot[bot] in https://github.com/actions/runner/pull/4077
+* Only start runner after network is online by @dupondje in https://github.com/actions/runner/pull/4094
+* Retry http error related to DNS resolution failure. by @TingluoHuang in https://github.com/actions/runner/pull/4110
+* Update Docker to v29.0.1 and Buildx to v0.30.0 by @github-actions[bot] in https://github.com/actions/runner/pull/4114
+* chore: update Node versions by @github-actions[bot] in https://github.com/actions/runner/pull/4115
+* Update dotnet sdk to latest version @8.0.416 by @github-actions[bot] in https://github.com/actions/runner/pull/4116
+* Compare updated workflow parser for ActionManifestManager by @ericsciple in https://github.com/actions/runner/pull/4111
+* Bump npm pkg version for hashFiles. by @TingluoHuang in https://github.com/actions/runner/pull/4122
 
 ## New Contributors
-* @dsanders11 made their first contribution in https://github.com/actions/runner/pull/3802
+* @lawrencegripper made their first contribution in https://github.com/actions/runner/pull/4081
+* @caxu-rh made their first contribution in https://github.com/actions/runner/pull/4083
+* @lets-build-an-ocean made their first contribution in https://github.com/actions/runner/pull/4098
+* @dupondje made their first contribution in https://github.com/actions/runner/pull/4094
 
-**Full Changelog**: https://github.com/actions/runner/compare/v2.323.0...v2.324.0
+**Full Changelog**: https://github.com/actions/runner/compare/v2.329.0...v2.330.0
 
 _Note: Actions Runner follows a progressive release policy, so the latest release might not be available to your enterprise, organization, or repository yet.
 To confirm which version of the Actions Runner you should expect, please view the download instructions for your enterprise, organization, or repository.
