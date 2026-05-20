@@ -1,4 +1,4 @@
-#nullable disable // Consider removing in the future to minimize likelihood of NullReferenceException; refer https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references
+﻿#nullable disable // Consider removing in the future to minimize likelihood of NullReferenceException; refer https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references
 
 using System;
 using System.Collections.Generic;
@@ -321,7 +321,7 @@ namespace GitHub.Actions.Expressions
                     context.Operators.Pop();
                 }
                 var functionOperands = PopOperands(context, parameterCount);
-                
+
                 // Node already exists on the operand stack
                 function = (Function)context.Operands.Peek();
 
@@ -348,6 +348,10 @@ namespace GitHub.Actions.Expressions
             else if (function.Parameters.Count > functionInfo.MaxParameters)
             {
                 throw new ParseException(ParseExceptionKind.TooManyParameters, token: @operator, expression: context.Expression);
+            }
+            else if (functionInfo.Name.Equals("case", StringComparison.OrdinalIgnoreCase) && function.Parameters.Count % 2 == 0)
+            {
+                throw new ParseException(ParseExceptionKind.EvenParameters, token: @operator, expression: context.Expression);
             }
         }
 
